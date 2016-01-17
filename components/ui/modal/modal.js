@@ -1,6 +1,7 @@
 import React from 'react';
-import Base from './Base';
+import Base from '../Base';
 import ReactDOM from 'react-dom';
+import './modal.scss';
 
 
 class Modal extends Base {
@@ -8,7 +9,7 @@ class Modal extends Base {
   constructor(props){
     super(props);
   }
-
+  
   render(){
     let shown = this.props.shown ? 'modalOpen' : 'modalClose';
     let color = this.props.color ? this.props.color : 'init';

@@ -1,9 +1,9 @@
 module.exports.Base = require('./Base');
 module.exports.Button = require('./button');
-module.exports.Dropdown = require('./Dropdown');
+module.exports.Dropdown = require('./dropdown');
 module.exports.Input = require('./input');
 module.exports.CheckBox = require('./checkBox');
-module.exports.Modal = require('./Modal');
+module.exports.Modal = require('./modal');
 module.exports.Nav = require('./Nav');
 module.exports.NavItem = require('./NavItem');
 module.exports.Textarea = require('./Textarea');

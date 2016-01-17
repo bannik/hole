@@ -1,16 +1,15 @@
 import React from 'react';
-import Base from './Base';
 import ReactDOM from 'react-dom';
 
 
-class Dropdown extends Base{
+class Dropdown extends React.Component{
 
   constructor(props){
     super(props);
 
     let selectedItem = props.selectedItem ? props.selectedItem : null;
 
-    self.state = {
+    this.state = {
       active: false,
       items: [],
       selectedItem: selectedItem,
@@ -34,41 +33,41 @@ class Dropdown extends Base{
   // Handles sending the data of the selected menu item back to
   // parent component
   _handleClick(data){
-    if(self.props.onSelect){
+    if(this.props.onSelect){
       this.props.onSelect(data);
     }
   }
 
   componentWillMount(){
     let onClick;
-
+    let self = this;
     for (var i = 0; i < this.props.items.length; i++) {
 
       // Setting onClick for each item of the menu
-      if(this.props.items[i].exData){
-        onClick = this.onClick(this.props.items[i].exData);
+      if(self.props.items[i].exData){
+        onClick = self.onClick.bind(self, self.props.items[i].exData);
       }else{
-        onClick = this.onClick(this.props.items[i].label);
+        onClick = self.onClick.bind(self, self.props.items[i].label);
       }
 
       // Checks if you have setted an image and a holder in your array
       // and sets them as header
-      if(this.props.items[i].type === 'image' && !this.state.hcontent.image){
-        this.setState({
+      if(self.props.items[i].type === 'image' && !self.state.hcontent.image){
+        self.setState({
           hcontent:{
-            image: this.props.items[i].src
+            image: self.props.items[i].src
           }
         });
-      }if(this.props.items[i].type === 'holder' && !this.state.hcontent.holder) {
-        this.setState({
+      }if(self.props.items[i].type === 'holder' && !self.state.hcontent.holder) {
+        self.setState({
           hcontent:{
-            holder: this.props.items[i].label
+            holder: self.props.items[i].label
           }
         });
       }
       // Here We take all the items of the
-      if(this.props.items[i].type === 'item' && this.props.items[i].label != this.state.selectedItem){
-        this.state.items.push(<li onClick={onClick} key={i}>{this.props.items[i].label}</li>);
+      if(self.props.items[i].type === 'item' && self.props.items[i].label != self.state.selectedItem){
+        self.state.items.push(<li onClick={onClick} key={i}>{self.props.items[i].label}</li>);
       }
     }
   }
@@ -81,16 +80,16 @@ class Dropdown extends Base{
     }
   }
   render(){
-    let self = this;
+
     let hcontent = {};
     let items = [];
     let holder = [];
-    let styles = self.props.styles ? self.props.styles : {};
+    let styles = this.props.styles ? this.props.styles : {};
     let onClick;
-    let menuClass = ['dropContent', self.props.className];
+    let menuClass = ['dropContent', this.props.className];
     let arrowClass = this.state.active ? 'fa fa-angle-up' : 'fa fa-angle-down';
 
-    if(self.state.active){
+    if(this.state.active){
       menuClass.push('dropActive');
     }
 
