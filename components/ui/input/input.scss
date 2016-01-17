@@ -1,0 +1,23 @@
+.inputWrap{
+  position: relative;
+  display: block;
+  label{
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #222;
+  }
+  input{
+    position: relative;
+    display: block;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #e8e8e8;
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 14px;
+    color: #222;
+    outline: none;
+  }
+}

@@ -12,10 +12,13 @@ function Navigation() {
   return (
     <ul className="Navigation" role="menu">
       <li className="Navigation-item">
-        <a className="Navigation-link" href="/" onClick={Link.handleClick}>Home</a>
+        <a className="Navigation-link" href="https://github.com/bannik/hole">Repo</a>
       </li>
       <li className="Navigation-item">
-        <a className="Navigation-link" href="/about" onClick={Link.handleClick}>About</a>
+        <a className="Navigation-link" href="https://github.com/bannik/hole/issues">Issues</a>
+      </li>
+      <li className="Navigation-item">
+        <a className="Navigation-link" href="https://github.com/bannik">My Github</a>
       </li>
     </ul>
   );

@@ -18,6 +18,55 @@ html, body {
   margin: 0 auto;
 }
 
+.init {
+  .butn{
+    &.primary {
+      background-color: #40BCD8;
+      color: white;
+      font-weight: 700;
+      &:hover {
+        background-color: lighten(#40BCD8, 10%);
+      }
+      &:active {
+        background-color: darken(#40BCD8, 10%);
+      }
+    }
+    &.secondary {
+      background-color: #e8e8e8;
+      color: #222222;
+      font-weight: 700;
+      &:hover {
+        background-color: lighten(#F7F4EA, 10%);
+      }
+      &:active {
+        background-color: darken(#F7F4EA, 10%);
+      }
+    }
+    &.error {
+      background-color: #D63230;
+      color: #ffffff;
+      font-weight: 700;
+      &:hover {
+        background-color: lighten(#D63230, 10%);
+      }
+      &:active {
+        background-color: darken(#D63230, 10%);
+      }
+    }
+    &.warning {
+      background-color: #F39237;
+      color: #ffffff;
+      font-weight: 700;
+      &:hover {
+        background-color: lighten(#F39237, 10%);
+      }
+      &:active {
+        background-color: darken(#F39237, 10%);
+      }
+    }
+  }
+}
+
 @media (min-width: $screen-sm-min) {
   .Layout {
     width: calc($screen-sm-min - 18px);

@@ -1,4 +1,26 @@
 {
+  "name": "react-hole",
+  "version": "0.0.6",
+  "description": "A UI library for React.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bannik/hole.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "ui",
+    "uikit",
+    "uiKit",
+    "components",
+    "reactcomponents",
+    "reactComponents"
+  ],
+  "author": "Nik Christodoulakis aka Bannik <me@bannik.com> (http://github.com/bannik)",
+  "bugs": {
+    "url": "https://github.com/bannik/hole/issues"
+  },
+  "homepage": "https://github.com/bannik/hole",
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "babel": "^5.8.29",
