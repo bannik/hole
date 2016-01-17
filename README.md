@@ -7,9 +7,7 @@ I am trying to put all unicorns in place to help me out!
 
 #### So how it actually works?
 
-I have built a list of components which are based on the most common needs I was able to find out. You have to download the repo and import any of the files you need (there is an example for each component). Then you just render the component you need with the properties you want it to have. And you are ready to go.
-
-
+I have built a list of components which are based on the most common needs I was able to find out. You have to download the repo and copy-paste /components/ui to your project. Then you just render the component you need with the properties you want it to have. There is an example for each of components you can use for now. And you are ready to go.
 
 ## Try It
 
@@ -21,10 +19,10 @@ npm start
 
 And now I will slowly add things to the app and you will see how the magic happens down here, if something is not clear or not working please put up there an issue and I will try to fix it :)
 
-## Button (src/ui/button.js)
+## Button (src/ui/button/)
 
 ```
-import { Button } from __your__dir_location__'/hole'
+import { Button } from __your__dir_location__'/ui'
 
 <Button label="Holla!" type="primary"/>
 ```
@@ -42,10 +40,10 @@ import { Button } from __your__dir_location__'/hole'
 
 
 
-## Input (src/ui/input.js)
+## Input (src/ui/input/)
 
 ```
-import { Input } from __your__dir_location__'/hole'
+import { Input } from __your__dir_location__'/ui'
 
 <Input placeholder="Type anything" defaultValue="donut" customClass="sampleClassInput" type="text" label="Sample Input" name="sampleInput"/>
 ```
@@ -61,10 +59,10 @@ import { Input } from __your__dir_location__'/hole'
 | customClass  | String   | name or names of classes separated with a space (' ') - Any String |
 | alteredPrice | Function | a function with one value passed which is what you get from the input  |
 
-## Checkbox (src/ui/checkBox.js)
+## Checkbox (src/ui/checkBox/)
 
 ```
-import { CheckBox } from __your__dir_location__'/hole'
+import { CheckBox } from __your__dir_location__'/ui'
 
 <CheckBox label="Type anything" checked={false} customClass="sampleClassCheckbox" />
 ```
