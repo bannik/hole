@@ -7,7 +7,7 @@
 import React, { PropTypes } from 'react';
 import './Layout.scss';
 import Navigation from '../Navigation';
-import { Button, CheckBox, Input, Modal, Base } from '../ui';
+import { Button, CheckBox, Input, Modal, Base, Tabs, Tab } from '../ui';
 
 class Layout extends Base{
 
@@ -25,7 +25,6 @@ class Layout extends Base{
     	{ type: 'item', label: 'Top'},
     	{ type: 'item', label: 'Bottom'},
     ];
-    console.log(this.state.modalTest1);
     return (
       <div className={ classes }>
         <Navigation />
@@ -44,6 +43,11 @@ class Layout extends Base{
         <Modal shown={this.state.modalTest1} onBlur={this.toggleModal.bind(this)}>
           ajshdjhd
         </Modal>
+        <Tabs>
+          <Tab title="tab1">Tab 1 Content</Tab>
+          <Tab title="tab2">Tab 2 Content</Tab>
+          <Tab title="tab3">Tab 3 Content</Tab>
+        </Tabs>
       </div>
     );
   }
